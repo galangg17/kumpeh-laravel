@@ -38,12 +38,12 @@
             @csrf
             <div>
                 <label class="block text-xs font-bold text-stone-300 mb-1">Email Administrator</label>
-                <input type="email" name="email" value="{{ old('email', 'admin@desa-kumpeh.id') }}" required class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-xs text-white placeholder-stone-400 focus:outline-none focus:border-amber-400">
+                <input type="email" name="email" value="{{ old('email') }}" required placeholder="Masukkan email administrator" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-xs text-white placeholder-stone-400 focus:outline-none focus:border-amber-400">
             </div>
 
             <div>
                 <label class="block text-xs font-bold text-stone-300 mb-1">Password</label>
-                <input type="password" name="password" value="admin123" required class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-xs text-white placeholder-stone-400 focus:outline-none focus:border-amber-400">
+                <input type="password" name="password" required placeholder="Masukkan password" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-xs text-white placeholder-stone-400 focus:outline-none focus:border-amber-400">
             </div>
 
             <button type="submit" class="w-full bg-[#C85A32] hover:bg-[#A44322] text-white text-xs font-bold py-3.5 rounded-xl shadow-lg transition-colors flex items-center justify-center space-x-2">
@@ -51,10 +51,6 @@
                 <span>Masuk ke Dashboard CMS</span>
             </button>
         </form>
-
-        <div class="text-center pt-2 border-t border-white/10 text-[11px] text-stone-400">
-            <p>Demo Login: <strong class="text-amber-300">admin@desa-kumpeh.id</strong> / <strong class="text-amber-300">admin123</strong></p>
-        </div>
 
     </div>
 
