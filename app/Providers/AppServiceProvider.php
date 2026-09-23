@@ -21,6 +21,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if (config('app.env') === 'production' || request()->server('HTTP_X_FORWARDED_PROTO') === 'https') {
+            URL::forceScheme('https');
+        }
+
         View::composer('*', function ($view) {
             try {
                 $siteSettings = SiteSetting::all()->pluck('value', 'key')->toArray();
